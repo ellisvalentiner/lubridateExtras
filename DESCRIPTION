@@ -1,0 +1,16 @@
+Package: lubridateExtras
+Type: Package
+Title: Convenience functions for the lubridate package
+Version: 0.1.0
+Authors@R: person("Ellis", "Valentiner", email = "ellis.valentiner@gmail.com",
+                  role = c("aut", "cre"))
+Description: Provides extra functionality to lubridate. Largely consisting of
+    convenience functions.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+  lubridate (>= 1.6.0)
+Remotes:
+  tidyverse/lubridate
+RoxygenNote: 6.0.1
