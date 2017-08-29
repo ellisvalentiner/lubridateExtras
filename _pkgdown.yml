@@ -1,0 +1,5 @@
+url: https://ellisvalentiner.github.com/lubridateExtras
+
+template:
+  params:
+    bootswatch: lumen
