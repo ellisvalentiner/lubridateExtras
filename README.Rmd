@@ -41,9 +41,17 @@ If you encounter a clear bug, please file a minimal reproducible example on [git
 ```{r}
 library(lubridateExtras)
 
+yesterday()
+
+tomorrow()
+
 days_ago(7)  # equivalent to lubridate::today() - lubridate::days(7)
 
 days_hence(7)  # equivalent to lubridate::today() + lubridate::days(7)
 ```
 
+## Why lubridateExtras?
 
+Some people are probably asking the question: why lubridateExtras?
+
+lubridateExtras does not do anything that you cannot do with lubridate but similarly you don't need lubridate at all to work with date/times in R! If you like the syntactic sugar of lubridateExtras then use it, otherwise stick with what works for you.

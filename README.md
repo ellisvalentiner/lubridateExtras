@@ -29,9 +29,22 @@ Usage
 ``` r
 library(lubridateExtras)
 
+yesterday()
+#> [1] "2017-09-23"
+
+tomorrow()
+#> [1] "2017-09-25"
+
 days_ago(7)  # equivalent to lubridate::today() - lubridate::days(7)
-#> [1] "2017-09-14"
+#> [1] "2017-09-17"
 
 days_hence(7)  # equivalent to lubridate::today() + lubridate::days(7)
-#> [1] "2017-09-28"
+#> [1] "2017-10-01"
 ```
+
+Why lubridateExtras?
+--------------------
+
+Some people are probably asking the question: why lubridateExtras?
+
+lubridateExtras does not do anything that you cannot do with lubridate but similarly you don't need lubridate at all to work with date/times in R! If you like the syntactic sugar of lubridateExtras then use it, otherwise stick with what works for you.

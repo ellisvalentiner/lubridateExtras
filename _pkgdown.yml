@@ -11,7 +11,7 @@ navbar:
   type: default
   left:
   - text: Intro
-    href: lubridateExtras.html
+    href: articles/intro.html
   - text: Reference
     href: reference/index.html
   - text: News

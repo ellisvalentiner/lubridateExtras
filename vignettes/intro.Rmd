@@ -1,0 +1,36 @@
+---
+title: "Introduction to lubridateExtras"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(lubridate))
+library(lubridateExtras)
+```
+
+lubridateExtras provides functions to improve code readability and increase laziness.
+
+## Example
+
+Suppose you want to review transactions from the past 7 days.
+
+Without lubridateExtras, this might look like this:
+
+```{r, eval=FALSE}
+transactions %>%
+  filter(date >= today() - days(7))
+```
+
+Even in this straightforward example it can be difficult to remember: does the `>=` operator evaluate before or after the `-` operator?
+
+lubridateExtra aims to remove this sort of ambiguity and make the intent clearer through convenience functions. With lubridateExtras, we could rewrite this as follows:
+
+```{r, eval=FALSE}
+transactions %>%
+  filter(date >= days_ago(7))
+```
+
+This accomplishes the exact same thing.

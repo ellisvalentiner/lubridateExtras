@@ -29,7 +29,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="articles/lubridateExtras.html">Intro</a>
+  <a href="articles/intro.html">Intro</a>
 </li>
 <li>
   <a href="reference/index.html">Reference</a>
@@ -85,11 +85,23 @@ devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocument
 <a href="#usage" class="anchor"></a>Usage</h2>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(lubridateExtras)
 
+<span class="kw"><a href="reference/yesterday.html">yesterday</a></span>()
+<span class="co">#&gt; [1] "2017-09-23"</span>
+
+<span class="kw"><a href="reference/tomorrow.html">tomorrow</a></span>()
+<span class="co">#&gt; [1] "2017-09-25"</span>
+
 <span class="kw"><a href="reference/days_ago.html">days_ago</a></span>(<span class="dv">7</span>)  <span class="co"># equivalent to lubridate::today() - lubridate::days(7)</span>
-<span class="co">#&gt; [1] "2017-09-14"</span>
+<span class="co">#&gt; [1] "2017-09-17"</span>
 
 <span class="kw"><a href="reference/days_hence.html">days_hence</a></span>(<span class="dv">7</span>)  <span class="co"># equivalent to lubridate::today() + lubridate::days(7)</span>
-<span class="co">#&gt; [1] "2017-09-28"</span></code></pre></div>
+<span class="co">#&gt; [1] "2017-10-01"</span></code></pre></div>
+</div>
+<div id="why-lubridateextras" class="section level2">
+<h2 class="hasAnchor">
+<a href="#why-lubridateextras" class="anchor"></a>Why lubridateExtras?</h2>
+<p>Some people are probably asking the question: why lubridateExtras?</p>
+<p>lubridateExtras does not do anything that you cannot do with lubridate but similarly you don’t need lubridate at all to work with date/times in R! If you like the syntactic sugar of lubridateExtras then use it, otherwise stick with what works for you.</p>
 </div>
 </div>
 </div>
