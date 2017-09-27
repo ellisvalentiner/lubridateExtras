@@ -30,16 +30,16 @@ Usage
 library(lubridateExtras)
 
 yesterday()
-#> [1] "2017-09-23"
+#> [1] "2017-09-26"
 
 tomorrow()
-#> [1] "2017-09-25"
+#> [1] "2017-09-28"
 
 days_ago(7)  # equivalent to lubridate::today() - lubridate::days(7)
-#> [1] "2017-09-17"
+#> [1] "2017-09-20"
 
 days_hence(7)  # equivalent to lubridate::today() + lubridate::days(7)
-#> [1] "2017-10-01"
+#> [1] "2017-10-04"
 ```
 
 Why lubridateExtras?

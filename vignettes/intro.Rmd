@@ -1,11 +1,14 @@
 ---
 title: "Introduction to lubridateExtras"
-output: html_document
-editor_options: 
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to lubridateExtras}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
   chunk_output_type: console
 ---
 
-```{r}
+```{r, echo=FALSE}
 suppressPackageStartupMessages(library(dplyr))
 suppressPackageStartupMessages(library(lubridate))
 library(lubridateExtras)
