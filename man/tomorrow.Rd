@@ -19,5 +19,5 @@ The next day
 }
 \examples{
 tomorrow()
-tomorrow("GMT")
+tomorrow("UTC")
 }

@@ -8,7 +8,7 @@
 #'
 #' @examples
 #' yesterday()
-#' yesterday("GMT")
+#' yesterday("UTC")
 yesterday <- function(tzone = "") {
   as_date(now(tzone) - days(1))
 }
@@ -23,7 +23,7 @@ yesterday <- function(tzone = "") {
 #'
 #' @examples
 #' tomorrow()
-#' tomorrow("GMT")
+#' tomorrow("UTC")
 tomorrow <- function(tzone = "") {
   as_date(now(tzone) + days(1))
 }
