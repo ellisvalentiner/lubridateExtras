@@ -18,3 +18,4 @@ Remotes:
   tidyverse/lubridate,
   tidyverse/hms
 RoxygenNote: 6.0.1
+Suggests: testthat
