@@ -30,8 +30,6 @@ Usage
 library(lubridateExtras)
 
 yesterday()
-#> Warning in as.POSIXlt.POSIXct(date): unknown timezone 'default/America/
-#> Detroit'
 #> [1] "2017-10-21"
 
 tomorrow()
@@ -42,6 +40,9 @@ days_ago(7)  # equivalent to lubridate::today() - lubridate::days(7)
 
 days_hence(7)  # equivalent to lubridate::today() + lubridate::days(7)
 #> [1] "2017-10-29"
+
+hms("2017-10-22 15:33:00")  # extracts the time-of-day component
+#> 15:33:00
 ```
 
 Why lubridateExtras?

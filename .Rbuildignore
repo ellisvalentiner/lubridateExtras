@@ -6,3 +6,5 @@ README.Rmd
 ^codecov\.yml$
 ^\.travis\.yml$
 ^vignettes/*
+^CONDUCT\.md$
+^CONTRIBUTING\.md$

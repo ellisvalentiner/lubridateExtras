@@ -86,8 +86,6 @@ devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocument
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(lubridateExtras)
 
 <span class="kw"><a href="reference/yesterday.html">yesterday</a></span>()
-<span class="co">#&gt; Warning in as.POSIXlt.POSIXct(date): unknown timezone 'default/America/</span>
-<span class="co">#&gt; Detroit'</span>
 <span class="co">#&gt; [1] "2017-10-21"</span>
 
 <span class="kw"><a href="reference/tomorrow.html">tomorrow</a></span>()
@@ -97,7 +95,10 @@ devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocument
 <span class="co">#&gt; [1] "2017-10-15"</span>
 
 <span class="kw"><a href="reference/days_hence.html">days_hence</a></span>(<span class="dv">7</span>)  <span class="co"># equivalent to lubridate::today() + lubridate::days(7)</span>
-<span class="co">#&gt; [1] "2017-10-29"</span></code></pre></div>
+<span class="co">#&gt; [1] "2017-10-29"</span>
+
+<span class="kw"><a href="reference/hms.html">hms</a></span>(<span class="st">"2017-10-22 15:33:00"</span>)  <span class="co"># extracts the time-of-day component</span>
+<span class="co">#&gt; 15:33:00</span></code></pre></div>
 </div>
 <div id="why-lubridateextras" class="section level2">
 <h2 class="hasAnchor">
