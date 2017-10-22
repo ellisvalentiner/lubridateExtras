@@ -14,8 +14,6 @@ suppressPackageStartupMessages(library(lubridate))
 library(lubridateExtras)
 ```
 
-lubridateExtras provides functions to improve code readability and increase laziness.
-
 ## Example
 
 Suppose you want to review transactions from the past 7 days.
