@@ -10,7 +10,7 @@
 #' yesterday()
 #' yesterday("UTC")
 yesterday <- function(tzone = "") {
-  as_date(now(tzone) - days(1))
+  as_date(now(tzone = tzone) - days(1))
 }
 
 #' The next day
@@ -25,7 +25,7 @@ yesterday <- function(tzone = "") {
 #' tomorrow()
 #' tomorrow("UTC")
 tomorrow <- function(tzone = "") {
-  as_date(now(tzone) + days(1))
+  as_date(now(tzone = tzone) + days(1))
 }
 
 #' The date x days ago
@@ -119,4 +119,16 @@ is.weekend <- function(x) {
 #' is.weekend("2017-09-02")  # TRUE
 is.weekday <- function(x) {
   wday(x = as_date(x), label = FALSE, abbr = FALSE) %in% 2:6
+}
+
+#' Extract time-of-day values
+#'
+#' @export hms
+#' @param x a POSIXct, POSIXlt, Date, chron, yearmon, yearqtr, zoo, zooreg,
+#'   timeDate, xts, its, ti, jul, timeSeries, or fts object.
+#' @return hms object
+#' @examples
+#' hms("2017-10-22 15:01:00")
+hms <- function(x) {
+  hms::as.hms(strftime(x, format="%H:%M:%S"))
 }

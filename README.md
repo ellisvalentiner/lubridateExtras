@@ -30,16 +30,18 @@ Usage
 library(lubridateExtras)
 
 yesterday()
-#> [1] "2017-09-27"
+#> Warning in as.POSIXlt.POSIXct(date): unknown timezone 'default/America/
+#> Detroit'
+#> [1] "2017-10-21"
 
 tomorrow()
-#> [1] "2017-09-29"
+#> [1] "2017-10-23"
 
 days_ago(7)  # equivalent to lubridate::today() - lubridate::days(7)
-#> [1] "2017-09-21"
+#> [1] "2017-10-15"
 
 days_hence(7)  # equivalent to lubridate::today() + lubridate::days(7)
-#> [1] "2017-10-05"
+#> [1] "2017-10-29"
 ```
 
 Why lubridateExtras?

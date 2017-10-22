@@ -2,6 +2,7 @@
 
 export(days_ago)
 export(days_hence)
+export(hms)
 export(is.weekday)
 export(is.weekend)
 export(last_month)
