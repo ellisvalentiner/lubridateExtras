@@ -1,6 +1,5 @@
 library(lubridateExtras)
 context("Instances")
-Sys.setenv(TZ = "America/New_York")
 
 test_that("yesterday", {
   expect_equal(yesterday(), Sys.Date()-1)
