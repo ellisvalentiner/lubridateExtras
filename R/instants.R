@@ -2,8 +2,8 @@
 #'
 #' @export yesterday
 #' @param tzone a character vector specifying which time zone you would like to
-#'   find the previous date of. tzone defaults to the system time zone set on your
-#'   computer.
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
 #' @return the previous date as a Date object
 #'
 #' @examples
@@ -17,8 +17,8 @@ yesterday <- function(tzone = "") {
 #'
 #' @export tomorrow
 #' @param tzone a character vector specifying which time zone you would like to
-#'   find the previous date of. tzone defaults to the system time zone set on your
-#'   computer.
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
 #' @return the previous date as a Date object
 #'
 #' @examples
@@ -31,10 +31,11 @@ tomorrow <- function(tzone = "") {
 #' The date x days ago
 #'
 #' @export days_ago
-#' @param days an integer specifying the number of days to subtract from the current
+#' @param days an integer specifying the number of days to subtract from the
+#'   current
 #' @param tzone a character vector specifying which time zone you would like to
-#'   find the previous date of. tzone defaults to the system time zone set on your
-#'   computer.
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
 #' @return the date, x days ago
 #'
 #' @examples
@@ -49,8 +50,8 @@ days_ago <- function(days = 0, tzone = "") {
 #' @export days_hence
 #' @param days an integer specifying the number of days to add from the current
 #' @param tzone a character vector specifying which time zone you would like to
-#'   find the previous date of. tzone defaults to the system time zone set on your
-#'   computer.
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
 #' @return the date, x days hence
 #'
 #' @examples
@@ -64,8 +65,8 @@ days_hence <- function(days = 0, tzone = "") {
 #'
 #' @export this_month
 #' @param tzone a character vector specifying which time zone you would like to
-#'   find the current month of. tzone defaults to the system time zone set on your
-#'   computer.
+#'   find the current month of. tzone defaults to the system time zone set on
+#'   your computer.
 #' @return the current month as a Date object
 this_month <- function(tzone = "") {
   floor_date(x = today(tzone = tzone), unit = "month")
@@ -75,8 +76,8 @@ this_month <- function(tzone = "") {
 #'
 #' @export last_month
 #' @param tzone a character vector specifying which time zone you would like to
-#'   find the previous month of. tzone defaults to the system time zone set on your
-#'   computer.
+#'   find the previous month of. tzone defaults to the system time zone set on
+#'   your computer.
 #' @return the previous month as a Date object
 last_month <- function(tzone = "") {
   floor_date(x = today(tzone = tzone), unit = "month") - months(1)
@@ -130,5 +131,5 @@ is.weekday <- function(x) {
 #' @examples
 #' hms("2017-10-22 15:01:00")
 hms <- function(x) {
-  hms::as.hms(strftime(x, format="%H:%M:%S"))
+  hms::as.hms(strftime(x, format = "%H:%M:%S"))
 }

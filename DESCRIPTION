@@ -17,11 +17,13 @@ Imports:
   hms (>= 0.3)
 Suggests:
   knitr (>= 1.17),
+  lintr (>= 1.0.1.9000),
   testthat (>= 1.0.2)
 Remotes:
-  tidyverse/lubridate,
   tidyverse/hms,
   yihui/knitr,
+  jimhester/lintr,
+  tidyverse/lubridate,
   r-lib/testthat
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
