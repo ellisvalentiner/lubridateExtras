@@ -19,5 +19,5 @@ The previous day
 }
 \examples{
 yesterday()
-yesterday("GMT")
+yesterday("UTC")
 }

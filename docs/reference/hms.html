@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • lubridateExtras</title>
+<title>Extract time-of-day values — hms • lubridateExtras</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -37,7 +37,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -78,100 +78,45 @@
       </header>
 
       <div class="row">
-  <div class="col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>
-        Reference
-        <small>version&nbsp;0.1.1</small>
-      </h1>
+    <h1>Extract time-of-day values</h1>
     </div>
 
-    <div class="contents">
-      <table class="ref-index">
+    
+    <p>Extract time-of-day values</p>
+    
 
-      <colgroup>
-        <col class="alias" />
-        <col class="title" />
-      </colgroup>
+    <pre class="usage"><span class='fu'>hms</span>(<span class='no'>x</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>x</th>
+      <td><p>a POSIXct, POSIXlt, Date, chron, yearmon, yearqtr, zoo, zooreg,
+timeDate, xts, its, ti, jul, timeSeries, or fts object.</p></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-      <tbody>
-        <tr>
-          <th colspan="2">
-            <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-            <p class="section-desc"></p>
-          </th>
-        </tr>
-        <tr>
-          <!--  -->
-          <td>
-            <p><code><a href="days_ago.html">days_ago</a></code> </p>
-          </td>
-          <td><p>The date x days ago</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="days_hence.html">days_hence</a></code> </p>
-          </td>
-          <td><p>The date x days hence</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="hms.html">hms</a></code> </p>
-          </td>
-          <td><p>Extract time-of-day values</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="is.weekday.html">is.weekday</a></code> </p>
-          </td>
-          <td><p>Is x a weekday?</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="is.weekend.html">is.weekend</a></code> </p>
-          </td>
-          <td><p>Is x a weekend?</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="last_month.html">last_month</a></code> </p>
-          </td>
-          <td><p>The previous month</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="next_month.html">next_month</a></code> </p>
-          </td>
-          <td><p>The next month</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="this_month.html">this_month</a></code> </p>
-          </td>
-          <td><p>The current month</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="tomorrow.html">tomorrow</a></code> </p>
-          </td>
-          <td><p>The next day</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="yesterday.html">yesterday</a></code> </p>
-          </td>
-          <td><p>The previous day</p></td>
-        </tr>
-      </tbody>
-      </table>
-    </div>
+    <p>hms object</p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>hms</span>(<span class='st'>"2017-10-22 15:01:00"</span>)</div><div class='output co'>#&gt; 15:01:00</div></pre>
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#value">Value</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
     </ul>
+
   </div>
 </div>
 

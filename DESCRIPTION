@@ -1,7 +1,7 @@
 Package: lubridateExtras
 Type: Package
-Title: Convenience functions for the lubridate package
-Version: 0.1.0
+Title: Convenience Functions for Manipulating Datetimes
+Version: 0.1.1
 Authors@R: c(
     person("Ellis", "Valentiner", email = "ellis.valentiner@gmail.com", role = c("aut", "cre")),
     person("Geoffrey", "Hannigan", email = "hanni035@umn.edu", role = c("ctb")))
@@ -10,11 +10,18 @@ Description: Provides extra functionality to lubridate. Largely consisting of
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Depends:
+  R (>= 3.1.0)
 Imports:
-  lubridate (>= 1.6.0)
+  lubridate (>= 1.6.0),
+  hms (>= 0.3)
 Suggests:
-  knitr
+  knitr (>= 1.17),
+  testthat (>= 1.0.2)
 Remotes:
-  tidyverse/lubridate
+  tidyverse/lubridate,
+  tidyverse/hms,
+  yihui/knitr,
+  r-lib/testthat
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1

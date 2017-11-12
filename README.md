@@ -30,16 +30,19 @@ Usage
 library(lubridateExtras)
 
 yesterday()
-#> [1] "2017-10-11"
+#> [1] "2017-10-21"
 
 tomorrow()
-#> [1] "2017-10-13"
+#> [1] "2017-10-23"
 
 days_ago(7)  # equivalent to lubridate::today() - lubridate::days(7)
-#> [1] "2017-10-05"
+#> [1] "2017-10-15"
 
 days_hence(7)  # equivalent to lubridate::today() + lubridate::days(7)
-#> [1] "2017-10-19"
+#> [1] "2017-10-29"
+
+hms("2017-10-22 15:33:00")  # extracts the time-of-day component
+#> 15:33:00
 ```
 
 Why lubridateExtras?

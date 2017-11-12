@@ -5,3 +5,6 @@ README.Rmd
 ^_pkgdown\.yml$
 ^codecov\.yml$
 ^\.travis\.yml$
+^vignettes/*
+^CONDUCT\.md$
+^CONTRIBUTING\.md$

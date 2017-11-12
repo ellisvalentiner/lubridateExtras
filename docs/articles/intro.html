@@ -64,21 +64,22 @@
     
     
 <div class="contents">
-<p>lubridateExtras provides functions to improve code readability and increase laziness.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">suppressPackageStartupMessages</span>(<span class="kw">library</span>(dplyr))
-<span class="kw">suppressPackageStartupMessages</span>(<span class="kw">library</span>(lubridate))
-<span class="kw">library</span>(lubridateExtras)</code></pre></div>
+<pre><code>## 
+## Attaching package: 'lubridateExtras'</code></pre>
+<pre><code>## The following object is masked from 'package:lubridate':
+## 
+##     hms</code></pre>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
 <p>Suppose you want to review transactions from the past 7 days.</p>
 <p>Without lubridateExtras, this might look like this:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">transactions <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(date <span class="op">&gt;=</span><span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/lubridate/topics/today">today</a></span>() <span class="op">-</span><span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/lubridate/topics/quick_periods">days</a></span>(<span class="dv">7</span>))</code></pre></div>
+<span class="st">  </span><span class="kw">filter</span>(date <span class="op">&gt;=</span><span class="st"> </span><span class="kw">today</span>() <span class="op">-</span><span class="st"> </span><span class="kw">days</span>(<span class="dv">7</span>))</code></pre></div>
 <p>Even in this straightforward example it can be difficult to remember: does the <code>&gt;=</code> operator evaluate before or after the <code>-</code> operator?</p>
 <p>lubridateExtra aims to remove this sort of ambiguity and make the intent clearer through convenience functions. With lubridateExtras, we could rewrite this as follows:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">transactions <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(date <span class="op">&gt;=</span><span class="st"> </span><span class="kw"><a href="../reference/days_ago.html">days_ago</a></span>(<span class="dv">7</span>))</code></pre></div>
+<span class="st">  </span><span class="kw">filter</span>(date <span class="op">&gt;=</span><span class="st"> </span><span class="kw"><a href="../reference/days_ago.html">days_ago</a></span>(<span class="dv">7</span>))</code></pre></div>
 <p>This accomplishes the exact same thing.</p>
 </div>
 </div>

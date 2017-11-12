@@ -5,11 +5,10 @@ vignette: >
   %\VignetteIndexEntry{Introduction to lubridateExtras}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+  chunk_output_type: console
 ---
 
-lubridateExtras provides functions to improve code readability and increase laziness.
-
-```{r, eval=FALSE}
+```{r, echo=FALSE}
 suppressPackageStartupMessages(library(dplyr))
 suppressPackageStartupMessages(library(lubridate))
 library(lubridateExtras)

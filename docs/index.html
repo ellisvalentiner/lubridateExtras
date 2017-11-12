@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Convenience functions for the lubridate package • lubridateExtras</title>
+<title>Convenience Functions for Manipulating Datetimes • lubridateExtras</title>
 <!-- jquery --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Font Awesome icons --><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 <!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
@@ -86,16 +86,19 @@ devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocument
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(lubridateExtras)
 
 <span class="kw"><a href="reference/yesterday.html">yesterday</a></span>()
-<span class="co">#&gt; [1] "2017-10-11"</span>
+<span class="co">#&gt; [1] "2017-10-21"</span>
 
 <span class="kw"><a href="reference/tomorrow.html">tomorrow</a></span>()
-<span class="co">#&gt; [1] "2017-10-13"</span>
+<span class="co">#&gt; [1] "2017-10-23"</span>
 
 <span class="kw"><a href="reference/days_ago.html">days_ago</a></span>(<span class="dv">7</span>)  <span class="co"># equivalent to lubridate::today() - lubridate::days(7)</span>
-<span class="co">#&gt; [1] "2017-10-05"</span>
+<span class="co">#&gt; [1] "2017-10-15"</span>
 
 <span class="kw"><a href="reference/days_hence.html">days_hence</a></span>(<span class="dv">7</span>)  <span class="co"># equivalent to lubridate::today() + lubridate::days(7)</span>
-<span class="co">#&gt; [1] "2017-10-19"</span></code></pre></div>
+<span class="co">#&gt; [1] "2017-10-29"</span>
+
+<span class="kw"><a href="reference/hms.html">hms</a></span>(<span class="st">"2017-10-22 15:33:00"</span>)  <span class="co"># extracts the time-of-day component</span>
+<span class="co">#&gt; 15:33:00</span></code></pre></div>
 </div>
 <div id="why-lubridateextras" class="section level2">
 <h2 class="hasAnchor">

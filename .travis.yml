@@ -4,6 +4,8 @@ language: r
 sudo: false
 cache: packages
 latex: false
+r_packages:
+  - covr
 
 env:
   global:

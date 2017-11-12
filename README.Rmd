@@ -12,7 +12,11 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.path = "README-"
 )
-options(tibble.print_min = 5, tibble.print_max = 5)
+options(
+  tibble.print_min = 5,
+  tibble.print_max = 5
+)
+Sys.setenv(TZ = "America/Detroit")
 ```
 
 # lubridateExtras <img src="man/figures/logo.svg" align="right" height="120" width="139" />
@@ -48,6 +52,8 @@ tomorrow()
 days_ago(7)  # equivalent to lubridate::today() - lubridate::days(7)
 
 days_hence(7)  # equivalent to lubridate::today() + lubridate::days(7)
+
+hms("2017-10-22 15:33:00")  # extracts the time-of-day component
 ```
 
 ## Why lubridateExtras?
