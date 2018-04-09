@@ -37,6 +37,18 @@ test_that("next_month", {
   expect_equal(next_month(), this_month() + months(1))
 })
 
+test_that("this_week", {
+  expect_equal(this_week(), floor_date(today(), unit = "week"))
+})
+
+test_that("last_week", {
+  expect_equal(last_week(), this_week() - weeks(1))
+})
+
+test_that("next_week", {
+  expect_equal(next_week(), this_week() + weeks(1))
+})
+
 test_that("is.weekday", {
   expect_equal(is.weekday("2017-10-23"), TRUE)
   expect_equal(is.weekday("2017-10-22"), FALSE)

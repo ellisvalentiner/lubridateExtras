@@ -62,51 +62,38 @@
     
 <div class="contents">
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-<div id="lubridateextras" class="section level1">
-
+<section id="lubridateextras" class="level1">
 <p>Convenience functions for the lubridate package</p>
 <!-- Placeholder for build status, CRAN status, and coverage status -->
-<div id="overview" class="section level2">
-<h2 class="hasAnchor">
-<a href="#overview" class="anchor"></a>Overview</h2>
+<section id="overview" class="level2"><h2>Overview</h2>
 <p>Lubridate makes it easier to work with date-time data in R and provides new capabilities. LubridateExtras builds on top of lubridate to provide a number of convenience functions, primarily focused on abstracting patterns in ways that improve code readability and reduce copying and pasting code.</p>
-</div>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># lubridateExtras is not currently on CRAN</span>
-<span class="co"># Please install the development version from GitHub:</span>
-<span class="co"># install.packages("devtools")</span>
-devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"ellisvalentiner/lubridateExtras"</span>)</code></pre></div>
+</section><section id="installation" class="level2"><h2>Installation</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># lubridateExtras is not currently on CRAN</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="co"># Please install the development version from GitHub:</span></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co"># install.packages("devtools")</span></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"ellisvalentiner/lubridateExtras"</span>)</a></code></pre></div>
 <p>If you encounter a clear bug, please file a minimal reproducible example on <a href="https://github.com/ellisvalentiner/lubridateExtras/issues">github</a>.</p>
-</div>
-<div id="usage" class="section level2">
-<h2 class="hasAnchor">
-<a href="#usage" class="anchor"></a>Usage</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(lubridateExtras)
-
-<span class="kw"><a href="reference/yesterday.html">yesterday</a></span>()
-<span class="co">#&gt; [1] "2017-10-21"</span>
-
-<span class="kw"><a href="reference/tomorrow.html">tomorrow</a></span>()
-<span class="co">#&gt; [1] "2017-10-23"</span>
-
-<span class="kw"><a href="reference/days_ago.html">days_ago</a></span>(<span class="dv">7</span>)  <span class="co"># equivalent to lubridate::today() - lubridate::days(7)</span>
-<span class="co">#&gt; [1] "2017-10-15"</span>
-
-<span class="kw"><a href="reference/days_hence.html">days_hence</a></span>(<span class="dv">7</span>)  <span class="co"># equivalent to lubridate::today() + lubridate::days(7)</span>
-<span class="co">#&gt; [1] "2017-10-29"</span>
-
-<span class="kw"><a href="reference/hms.html">hms</a></span>(<span class="st">"2017-10-22 15:33:00"</span>)  <span class="co"># extracts the time-of-day component</span>
-<span class="co">#&gt; 15:33:00</span></code></pre></div>
-</div>
-<div id="why-lubridateextras" class="section level2">
-<h2 class="hasAnchor">
-<a href="#why-lubridateextras" class="anchor"></a>Why lubridateExtras?</h2>
+</section><section id="usage" class="level2"><h2>Usage</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">library</span>(lubridateExtras)</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="kw"><a href="reference/yesterday.html">yesterday</a></span>()</a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt; [1] "2018-02-20"</span></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="kw"><a href="reference/tomorrow.html">tomorrow</a></span>()</a>
+<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt; [1] "2018-02-22"</span></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="kw"><a href="reference/days_ago.html">days_ago</a></span>(<span class="dv">7</span>)  <span class="co"># equivalent to lubridate::today() - lubridate::days(7)</span></a>
+<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt; [1] "2018-02-14"</span></a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"></a>
+<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="kw"><a href="reference/days_hence.html">days_hence</a></span>(<span class="dv">7</span>)  <span class="co"># equivalent to lubridate::today() + lubridate::days(7)</span></a>
+<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt; [1] "2018-02-28"</span></a>
+<a class="sourceLine" id="cb2-14" data-line-number="14"></a>
+<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="kw"><a href="reference/hms.html">hms</a></span>(<span class="st">"2017-10-22 15:33:00"</span>)  <span class="co"># extracts the time-of-day component</span></a>
+<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="co">#&gt; 15:33:00</span></a></code></pre></div>
+</section><section id="why-lubridateextras" class="level2"><h2>Why lubridateExtras?</h2>
 <p>Some people are probably asking the question: why lubridateExtras?</p>
 <p>lubridateExtras does not do anything that you cannot do with lubridate but similarly you don’t need lubridate at all to work with date/times in R! If you like the syntactic sugar of lubridateExtras then use it, otherwise stick with what works for you.</p>
-</div>
-</div>
+</section></section>
 </div>
   </div>
 

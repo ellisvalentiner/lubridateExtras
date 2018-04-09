@@ -8,8 +8,8 @@ last_month(tzone = "")
 }
 \arguments{
 \item{tzone}{a character vector specifying which time zone you would like to
-find the previous month of. tzone defaults to the system time zone set on your
-computer.}
+find the previous month of. tzone defaults to the system time zone set on
+your computer.}
 }
 \value{
 the previous month as a Date object

@@ -8,8 +8,8 @@ yesterday(tzone = "")
 }
 \arguments{
 \item{tzone}{a character vector specifying which time zone you would like to
-find the previous date of. tzone defaults to the system time zone set on your
-computer.}
+find the previous date of. tzone defaults to the system time zone set on
+your computer.}
 }
 \value{
 the previous date as a Date object
@@ -20,4 +20,7 @@ The previous day
 \examples{
 yesterday()
 yesterday("UTC")
+}
+\seealso{
+\code{\link{tomorrow}}
 }
