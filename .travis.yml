@@ -6,6 +6,8 @@ cache: packages
 latex: false
 r_packages:
   - covr
+r_github_packages:
+  - jimhester/lintr
 
 env:
   global:

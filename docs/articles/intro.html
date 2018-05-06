@@ -69,19 +69,17 @@
 <pre><code>## The following object is masked from 'package:lubridate':
 ## 
 ##     hms</code></pre>
-<div id="example" class="section level2">
-<h2 class="hasAnchor">
-<a href="#example" class="anchor"></a>Example</h2>
+<section id="example" class="level2"><h2>Example</h2>
 <p>Suppose you want to review transactions from the past 7 days.</p>
 <p>Without lubridateExtras, this might look like this:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">transactions <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">filter</span>(date <span class="op">&gt;=</span><span class="st"> </span><span class="kw">today</span>() <span class="op">-</span><span class="st"> </span><span class="kw">days</span>(<span class="dv">7</span>))</code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">transactions <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(date <span class="op">&gt;=</span><span class="st"> </span><span class="kw">today</span>() <span class="op">-</span><span class="st"> </span><span class="kw">days</span>(<span class="dv">7</span>))</a></code></pre></div>
 <p>Even in this straightforward example it can be difficult to remember: does the <code>&gt;=</code> operator evaluate before or after the <code>-</code> operator?</p>
 <p>lubridateExtra aims to remove this sort of ambiguity and make the intent clearer through convenience functions. With lubridateExtras, we could rewrite this as follows:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">transactions <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">filter</span>(date <span class="op">&gt;=</span><span class="st"> </span><span class="kw"><a href="../reference/days_ago.html">days_ago</a></span>(<span class="dv">7</span>))</code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">transactions <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(date <span class="op">&gt;=</span><span class="st"> </span><span class="kw"><a href="../reference/days_ago.html">days_ago</a></span>(<span class="dv">7</span>))</a></code></pre></div>
 <p>This accomplishes the exact same thing.</p>
-</div>
+</section>
 </div>
   </div>
 

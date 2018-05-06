@@ -7,11 +7,12 @@
 days_ago(days = 0, tzone = "")
 }
 \arguments{
-\item{days}{an integer specifying the number of days to subtract from the current}
+\item{days}{an integer specifying the number of days to subtract from the
+current}
 
 \item{tzone}{a character vector specifying which time zone you would like to
-find the previous date of. tzone defaults to the system time zone set on your
-computer.}
+find the previous date of. tzone defaults to the system time zone set on
+your computer.}
 }
 \value{
 the date, x days ago

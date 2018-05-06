@@ -10,8 +10,8 @@ days_hence(days = 0, tzone = "")
 \item{days}{an integer specifying the number of days to add from the current}
 
 \item{tzone}{a character vector specifying which time zone you would like to
-find the previous date of. tzone defaults to the system time zone set on your
-computer.}
+find the previous date of. tzone defaults to the system time zone set on
+your computer.}
 }
 \value{
 the date, x days hence
