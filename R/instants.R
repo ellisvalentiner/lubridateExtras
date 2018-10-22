@@ -49,6 +49,54 @@ days_ago <- function(days = 0, tzone = "") {
   as_date(today(tzone = tzone) - days(x = days))
 }
 
+#' The date x weeks ago
+#'
+#' @param weeks an integer specifying the number of weeks to subtract from the
+#'   current
+#' @param tzone a character vector specifying which time zone you would like to
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
+#'
+#' @return the date, x weeks ago
+#' @export weeks_ago
+#'
+#' @examples
+weeks_ago <- function(weeks = 0, tzone = "") {
+  as_date(today(tzone = tzone) - weeks(x = weeks))
+}
+
+
+#' The date x months ago
+#'
+#' @param months an integer specifying th enumber of weeks to subtract from the current
+#' @param tzone a character vector specifying which time zone you would like to
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
+#'
+#' @return the date, x months ago
+#' @export months_ago
+#'
+#' @examples
+months_ago <- function(months = 0, tzone = "") {
+  as_date(today(tzone = tzone) - months(x = months))
+}
+
+#' The date x years ago
+#'
+#' @param years an integer specifying the number of days to subtract from the
+#'   current
+#' @param tzone a character vector specifying which time zone you would like to
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
+#'
+#' @return The date, x years ago
+#' @export years_ago
+#'
+#' @examples
+years_ago <- function(years = 0, tzone = "") {
+  as_date(today(tzone = tzone) - years(x = years))
+}
+
 #' The date x days hence
 #'
 #' @export days_hence
