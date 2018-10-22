@@ -32,6 +32,51 @@ tomorrow <- function(tzone = "") {
   as_date(now(tzone = tzone) + days(1))
 }
 
+#' The time x seconds before now
+#'
+#' @param seconds integer number of seconds
+#' @param tzone a character vector specifying which time zone you would like to
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
+#'
+#' @return The datetime, x seconds ago
+#' @export seconds_ago
+#'
+#' @examples
+seconds_ago <- function(seconds = 0, tzone = "") {
+  as_datetime(now() - seconds(x = seconds), tz = tzone)
+}
+
+#' The time x minutes before now
+#'
+#' @param minutes integer number of minutes
+#' @param tzone a character vector specifying which time zone you would like to
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
+#'
+#' @return
+#' @export minutes_ago
+#'
+#' @examples
+minutes_ago <- function(minutes = 0, tzone = "") {
+  as_datetime(now() - minutes(x = minutes), tz = tzone)
+}
+
+#' the time x hours ago
+#'
+#' @param hours integer number of hours
+#' @param tzone a character vector specifying which time zone you would like to
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
+#'
+#' @return
+#' @export hours_ago
+#'
+#' @examples
+hours_ago <- function(hours = 0, tzone = "") {
+  as_datetime(now() - hours(x = hours), tz = tzone)
+}
+
 #' The date x days ago
 #'
 #' @export days_ago
