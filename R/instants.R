@@ -32,6 +32,51 @@ tomorrow <- function(tzone = "") {
   as_date(now(tzone = tzone) + days(1))
 }
 
+#' The time x seconds before now
+#'
+#' @param seconds integer number of seconds
+#' @param tzone a character vector specifying which time zone you would like to
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
+#'
+#' @return The datetime, x seconds ago
+#' @export seconds_ago
+#'
+#' @examples
+seconds_ago <- function(seconds = 0, tzone = "") {
+  as_datetime(now() - seconds(x = seconds), tz = tzone)
+}
+
+#' The time x minutes before now
+#'
+#' @param minutes integer number of minutes
+#' @param tzone a character vector specifying which time zone you would like to
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
+#'
+#' @return
+#' @export minutes_ago
+#'
+#' @examples
+minutes_ago <- function(minutes = 0, tzone = "") {
+  as_datetime(now() - minutes(x = minutes), tz = tzone)
+}
+
+#' the time x hours ago
+#'
+#' @param hours integer number of hours
+#' @param tzone a character vector specifying which time zone you would like to
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
+#'
+#' @return
+#' @export hours_ago
+#'
+#' @examples
+hours_ago <- function(hours = 0, tzone = "") {
+  as_datetime(now() - hours(x = hours), tz = tzone)
+}
+
 #' The date x days ago
 #'
 #' @export days_ago
@@ -49,6 +94,98 @@ days_ago <- function(days = 0, tzone = "") {
   as_date(today(tzone = tzone) - days(x = days))
 }
 
+#' The date x weeks ago
+#'
+#' @param weeks an integer specifying the number of weeks to subtract from the
+#'   current
+#' @param tzone a character vector specifying which time zone you would like to
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
+#'
+#' @return the date, x weeks ago
+#' @export weeks_ago
+#'
+#' @examples
+weeks_ago <- function(weeks = 0, tzone = "") {
+  as_date(today(tzone = tzone) - weeks(x = weeks))
+}
+
+
+#' The date x months ago
+#'
+#' @param months an integer specifying th enumber of weeks to subtract from the current
+#' @param tzone a character vector specifying which time zone you would like to
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
+#'
+#' @return the date, x months ago
+#' @export months_ago
+#'
+#' @examples
+months_ago <- function(months = 0, tzone = "") {
+  as_date(today(tzone = tzone) - months(x = months))
+}
+
+#' The date x years ago
+#'
+#' @param years an integer specifying the number of days to subtract from the
+#'   current
+#' @param tzone a character vector specifying which time zone you would like to
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
+#'
+#' @return The date, x years ago
+#' @export years_ago
+#'
+#' @examples
+years_ago <- function(years = 0, tzone = "") {
+  as_date(today(tzone = tzone) - years(x = years))
+}
+
+#' The time x seconds before now
+#'
+#' @param seconds integer number of seconds
+#' @param tzone a character vector specifying which time zone you would like to
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
+#'
+#' @return The datetime, x seconds from now
+#' @export seconds_hence
+#'
+#' @examples
+seconds_hence <- function(seconds = 0, tzone = "") {
+  as_datetime(now() + seconds(x = seconds), tz = tzone)
+}
+
+#' The time x minutes before now
+#'
+#' @param minutes integer number of minutes
+#' @param tzone a character vector specifying which time zone you would like to
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
+#'
+#' @return The date time, x minutes from now
+#' @export minutes_hence
+#'
+#' @examples
+minutes_hence <- function(minutes = 0, tzone = "") {
+  as_datetime(now() + minutes(x = minutes), tz = tzone)
+}
+
+#' the time x hours hence
+#'
+#' @param hours integer number of hours
+#' @param tzone a character vector specifying which time zone you would like to
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
+#'
+#' @return The datetime, x hours from now
+#' @export hours_hence
+#'
+#' @examples
+hours_hence <- function(hours = 0, tzone = "") {
+  as_datetime(now() + hours(x = hours), tz = tzone)
+}
 #' The date x days hence
 #'
 #' @export days_hence
@@ -56,7 +193,7 @@ days_ago <- function(days = 0, tzone = "") {
 #' @param tzone a character vector specifying which time zone you would like to
 #'   find the previous date of. tzone defaults to the system time zone set on
 #'   your computer.
-#' @return the date, x days hence
+#' @return the datetime, x days from now
 #'
 #' @examples
 #' days_hence(3)
@@ -74,6 +211,54 @@ days_hence <- function(days = 0, tzone = "") {
 #' @return the current month as a Date object
 this_month <- function(tzone = "") {
   floor_date(x = today(tzone = tzone), unit = "month")
+}
+
+#' The date x weeks hence
+#'
+#' @param weeks an integer specifying the number of weeks to add to the
+#'   current
+#' @param tzone a character vector specifying which time zone you would like to
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
+#'
+#' @return the date, x weeks from now
+#' @export weeks_hence
+#'
+#' @examples
+weeks_hence <- function(weeks = 0, tzone = "") {
+  as_date(today(tzone = tzone) + weeks(x = weeks))
+}
+
+
+#' The date x months hence
+#'
+#' @param months an integer specifying the number of weeks to add to the current
+#' @param tzone a character vector specifying which time zone you would like to
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
+#'
+#' @return the date, x months from now
+#' @export months_hence
+#'
+#' @examples
+months_hence <- function(months = 0, tzone = "") {
+  as_date(today(tzone = tzone) + months(x = months))
+}
+
+#' The date x years hence
+#'
+#' @param years an integer specifying the number of days to add to the
+#'   current
+#' @param tzone a character vector specifying which time zone you would like to
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
+#'
+#' @return The date, x years form now
+#' @export years_hence
+#'
+#' @examples
+years_hence <- function(years = 0, tzone = "") {
+  as_date(today(tzone = tzone) + years(x = years))
 }
 
 #' The previous month
