@@ -73,7 +73,8 @@ x <- hms("12:01:59.23")
 ceiling_hms(x, "10 seconds")
 }
 \seealso{
-[base::round(), lubridate::round_date(), lubridate::floor_date(), lubridate::ceiling_date()]
+[base::round(), lubridate::round_date(), lubridate::floor_date(),
+  lubridate::ceiling_date()]
 }
 \keyword{chron}
 \keyword{manip}

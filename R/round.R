@@ -23,7 +23,8 @@
 #'   Arbitrary unique English abbreviations as in the [period()]
 #'   constructor are allowed. Rounding to multiple of units is supported.
 #' @keywords manip chron
-#' @seealso [base::round(), lubridate::round_date(), lubridate::floor_date(), lubridate::ceiling_date()]
+#' @seealso [base::round(), lubridate::round_date(), lubridate::floor_date(),
+#'   lubridate::ceiling_date()]
 #' @examples
 #'
 #' ## print fractional seconds
