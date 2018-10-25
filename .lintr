@@ -1,1 +1,1 @@
-exclude: list("library(*")
+exclude: "library*"
