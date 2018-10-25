@@ -2,9 +2,15 @@
 % Please edit documentation in R/round.R
 \name{round_hms}
 \alias{round_hms}
+\alias{floor_hms}
+\alias{ceiling_hms}
 \title{Round, floor and ceiling methods for hms objects}
 \usage{
 round_hms(x, unit = "second")
+
+floor_hms(x, unit = "seconds")
+
+ceiling_hms(x, unit = "seconds")
 }
 \arguments{
 \item{x}{a vector of date-time objects}
@@ -29,6 +35,12 @@ between two consecutive units, the convention is to round up. Note that this
 is in line with the behavior of R's [base::round.POSIXt()] function
 but does not follow the convention of the base [base::round()] function
 which "rounds to the even digit" per IEC 60559.
+
+`floor_hms()` takes a hms object and rounds it down to the nearest
+boundary of the specified time unit.
+
+`ceiling_hms()` takes a hms object and rounds it up to the nearest
+boundary of the specified time unit.
 }
 \examples{
 
@@ -57,6 +69,8 @@ ceiling_hms(x, "minute")
 ceiling_hms(x, "5 mins")
 ceiling_hms(x, "hour")
 
+x <- hms("12:01:59.23")
+ceiling_hms(x, "10 seconds")
 }
 \seealso{
 [base::round(), lubridate::round_date(), lubridate::floor_date(), lubridate::ceiling_date()]

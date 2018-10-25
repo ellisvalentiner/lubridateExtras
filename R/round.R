@@ -54,34 +54,36 @@
 #' @export
 round_hms <- function(x, unit = "second") {
   if (!length(x)) return(x)
-  xx <- as.POSIXlt(lubridate::hms(x), origin="1970-01-01T00:00:00", tz = "UTC")
-  x_rounded <- round_date(xx, unit = unit)
-  lubridateExtras::hms(x_rounded)
+  x <- lubridate::hms(x)
+  x <- as.POSIXlt(x, origin = "1970-01-01T00:00:00", tz = "GMT")
+  x <- round_date(x, unit = unit)
+  lubridateExtras::hms(x)
 }
 
 #' @description
 #' `floor_hms()` takes a hms object and rounds it down to the nearest
 #' boundary of the specified time unit.
-#' @rdname round_date
+#' @rdname round_hms
 #' @export
 floor_hms <- function(x, unit = "seconds") {
   if (!length(x)) return(x)
-  xx <- as.POSIXlt(lubridate::hms(x), origin="1970-01-01T00:00:00", tz = "UTC")
-  x_floored <- floor_date(xx, unit = unit)
-  lubridateExtras::hms(x_floored)
+  x <- lubridate::hms(x)
+  x <- as.POSIXlt(x, origin = "1970-01-01T00:00:00", tz = "GMT")
+  x <- floor_date(x, unit = unit)
+  lubridateExtras::hms(x)
 }
-
 #' @description
 #' `ceiling_hms()` takes a hms object and rounds it up to the nearest
 #' boundary of the specified time unit.
-#' @rdname round_date
+#' @rdname round_hms
 #' @export
 #' @examples
 #' x <- hms("12:01:59.23")
 #' ceiling_hms(x, "10 seconds")
 ceiling_hms <- function(x, unit = "seconds") {
   if (!length(x)) return(x)
-  xx <- as.POSIXlt(lubridate::hms(x), origin="1970-01-01T00:00:00", tz = "UTC")
-  x_ceiled <- ceiling_date(xx, unit = unit)
-  lubridateExtras::hms(x_ceiled)
+  x <- lubridate::hms(x)
+  x <- as.POSIXlt(x, origin = "1970-01-01T00:00:00", tz = "GMT")
+  x <- ceiling_date(x, unit = unit)
+  lubridateExtras::hms(x)
 }

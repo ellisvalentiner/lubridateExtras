@@ -62,10 +62,10 @@ test_that("is.weekend", {
 test_that("hms", {
   expect_equal(
     hms("2017-10-22 15:01:00"),
-    hms::hms(seconds = 0, minutes = 1, hours = 15)
+    lubridate::hms("15:01:00")
   )
   expect_equal(
     hms("2017-10-22 16:06:59"),
-    hms::hms(seconds = 59, minutes = 6, hours = 16)
+    lubridate::hms("16:06:59")
   )
 })

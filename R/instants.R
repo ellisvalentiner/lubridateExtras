@@ -353,5 +353,5 @@ is.weekday <- function(x) {
 #' @examples
 #' hms("2017-10-22 15:01:00")
 hms <- function(x) {
-  hms::as.hms(strftime(x, format = "%H:%M:%S"))
+  lubridate::hms(strftime(x, format = "%H:%M:%S"))
 }
