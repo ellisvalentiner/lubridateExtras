@@ -43,6 +43,8 @@ tomorrow <- function(tzone = "") {
 #' @export seconds_ago
 #'
 #' @examples
+#' seconds_ago(120)
+#' seconds_ago(3600)
 seconds_ago <- function(seconds = 0, tzone = "") {
   as_datetime(now() - seconds(x = seconds), tz = tzone)
 }
@@ -54,10 +56,12 @@ seconds_ago <- function(seconds = 0, tzone = "") {
 #'   find the previous date of. tzone defaults to the system time zone set on
 #'   your computer.
 #'
-#' @return
+#' @return The time, x minutes ago
 #' @export minutes_ago
 #'
 #' @examples
+#' minutes_ago(1)
+#' minutes_ago(60)
 minutes_ago <- function(minutes = 0, tzone = "") {
   as_datetime(now() - minutes(x = minutes), tz = tzone)
 }
@@ -69,10 +73,12 @@ minutes_ago <- function(minutes = 0, tzone = "") {
 #'   find the previous date of. tzone defaults to the system time zone set on
 #'   your computer.
 #'
-#' @return
+#' @return The time, x hours ago
 #' @export hours_ago
 #'
 #' @examples
+#' hours_ago(1)
+#' hours_ago(24)
 hours_ago <- function(hours = 0, tzone = "") {
   as_datetime(now() - hours(x = hours), tz = tzone)
 }
@@ -106,6 +112,8 @@ days_ago <- function(days = 0, tzone = "") {
 #' @export weeks_ago
 #'
 #' @examples
+#' weeks_ago(1)
+#' weeks_ago(52)
 weeks_ago <- function(weeks = 0, tzone = "") {
   as_date(today(tzone = tzone) - weeks(x = weeks))
 }
@@ -122,6 +130,8 @@ weeks_ago <- function(weeks = 0, tzone = "") {
 #' @export months_ago
 #'
 #' @examples
+#' months_ago(1)
+#' months_ago(12)
 months_ago <- function(months = 0, tzone = "") {
   as_date(today(tzone = tzone) - months(x = months))
 }
@@ -138,6 +148,8 @@ months_ago <- function(months = 0, tzone = "") {
 #' @export years_ago
 #'
 #' @examples
+#' years_ago(1)
+#' years_ago(2000)
 years_ago <- function(years = 0, tzone = "") {
   as_date(today(tzone = tzone) - years(x = years))
 }
@@ -153,6 +165,8 @@ years_ago <- function(years = 0, tzone = "") {
 #' @export seconds_hence
 #'
 #' @examples
+#' seconds_hence(60)
+#' seconds_hence(3600)
 seconds_hence <- function(seconds = 0, tzone = "") {
   as_datetime(now() + seconds(x = seconds), tz = tzone)
 }
@@ -168,6 +182,8 @@ seconds_hence <- function(seconds = 0, tzone = "") {
 #' @export minutes_hence
 #'
 #' @examples
+#' minutes_hence(60)
+#' minutes_hence(2440)
 minutes_hence <- function(minutes = 0, tzone = "") {
   as_datetime(now() + minutes(x = minutes), tz = tzone)
 }
@@ -183,6 +199,8 @@ minutes_hence <- function(minutes = 0, tzone = "") {
 #' @export hours_hence
 #'
 #' @examples
+#' hours_hence(1)
+#' hours_hence(24)
 hours_hence <- function(hours = 0, tzone = "") {
   as_datetime(now() + hours(x = hours), tz = tzone)
 }
@@ -225,6 +243,8 @@ this_month <- function(tzone = "") {
 #' @export weeks_hence
 #'
 #' @examples
+#' weeks_hence(1)
+#' weeks_hence(52)
 weeks_hence <- function(weeks = 0, tzone = "") {
   as_date(today(tzone = tzone) + weeks(x = weeks))
 }
@@ -241,6 +261,8 @@ weeks_hence <- function(weeks = 0, tzone = "") {
 #' @export months_hence
 #'
 #' @examples
+#' months_hence(1)
+#' months_hence(12)
 months_hence <- function(months = 0, tzone = "") {
   as_date(today(tzone = tzone) + months(x = months))
 }
@@ -257,6 +279,8 @@ months_hence <- function(months = 0, tzone = "") {
 #' @export years_hence
 #'
 #' @examples
+#' years_hence(1)
+#' years_hence(2000)
 years_hence <- function(years = 0, tzone = "") {
   as_date(today(tzone = tzone) + years(x = years))
 }
