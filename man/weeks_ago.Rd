@@ -20,3 +20,7 @@ the date, x weeks ago
 \description{
 The date x weeks ago
 }
+\examples{
+weeks_ago(1)
+weeks_ago(52)
+}

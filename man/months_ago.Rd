@@ -20,3 +20,7 @@ the date, x months ago
 \description{
 The date x months ago
 }
+\examples{
+months_ago(1)
+months_ago(12)
+}

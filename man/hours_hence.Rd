@@ -19,3 +19,7 @@ The datetime, x hours from now
 \description{
 the time x hours hence
 }
+\examples{
+hours_hence(1)
+hours_hence(24)
+}

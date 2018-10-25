@@ -25,6 +25,69 @@ test_that("days_hence", {
   expect_equal(days_hence(-1), yesterday())
 })
 
+test_that("days_agreement", {
+  expect_equal(days_ago(1), days_hence(-1))
+  expect_equal(days_ago(-1), days_hence(1))
+  expect_equal(days_ago(1), as_date(hours_ago(24)))
+  expect_equal(days_ago(365), years_ago(1))
+})
+
+test_that("weeks", {
+  expect_equal(weeks_ago(1), days_ago(7))
+  expect_equal(weeks_ago(-1), weeks_hence(1))
+  expect_equal(weeks_hence(1), days_hence(7))
+  expect_equal(wday(weeks_ago(1)), wday(now()))
+  expect_equal(wday(weeks_ago(52)), wday(now()))
+})
+
+test_that("months", {
+  expect_equal(months_ago(1), months_hence(-1))
+  expect_equal(months_ago(-1), months_hence(1))
+  expect_equal(day(months_ago(1)), day(today()))
+  expect_equal(day(months_ago(-1)), day(today()))
+  expect_equal(months_ago(12), years_ago(1))
+  expect_equal(months_hence(12), years_hence(1))
+})
+
+test_that("years", {
+  expect_equal(day(years_ago(1)), day(today()))
+  expect_equal(week(years_ago(1)), week(today()))
+  expect_equal(month(years_ago(1)), month(today()))
+  expect_equal(day(years_hence(1)), day(today()))
+  expect_equal(week(years_hence(1)), week(today()))
+  expect_equal(month(years_hence(1)), month(today()))
+})
+
+test_that("hours", {
+  expect_equal(hour(hours_ago(1)), hour(hours_hence(-1)))
+  expect_equal(hour(hours_ago(-1)), hour(hours_hence(1)))
+
+  expect_equal(minute(hours_ago(1)), minute(hours_hence(-1)))
+  expect_equal(minute(hours_ago(-1)), minute(hours_hence(1)))
+
+  expect_equal(as_date(hours_ago(24)), days_ago(1))
+  expect_equal(as_date(hours_hence(24)), days_hence(1))
+
+  expect_equal(as_date(hours_ago(7*24)), weeks_ago(1))
+  expect_equal(as_date(hours_hence(7*24)), weeks_hence(1))
+})
+
+test_that("minutes", {
+  expect_equal(minute(minutes_ago(1)), minute(minutes_hence(-1)))
+  expect_equal(minute(minutes_ago(-1)), minute(minutes_hence(1)))
+
+  expect_equal(hour(minutes_ago(60)), hour(hours_ago(1)))
+  expect_equal(day(minutes_ago(60*24)), day(days_ago(1)))
+  expect_equal(day(minutes_ago(60*24*7)), day(weeks_ago(1)))
+})
+
+test_that("seconds", {
+  expect_equal(minute(seconds_ago(60)), minute(seconds_hence(-60)))
+  expect_equal(minute(seconds_ago(60)), minute(minutes_ago(1)))
+  expect_equal(hour(seconds_ago(60*60)), hour(hours_ago(1)))
+  expect_equal(day(seconds_ago(24*60*60)), day(days_ago(1)))
+})
+
 test_that("this_month", {
   expect_equal(this_month(), as.Date(strftime(Sys.Date(), format = "%Y-%m-01")))
 })

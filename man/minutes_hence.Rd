@@ -19,3 +19,7 @@ The date time, x minutes from now
 \description{
 The time x minutes before now
 }
+\examples{
+minutes_hence(60)
+minutes_hence(2440)
+}

@@ -20,3 +20,7 @@ the date, x weeks from now
 \description{
 The date x weeks hence
 }
+\examples{
+weeks_hence(1)
+weeks_hence(52)
+}

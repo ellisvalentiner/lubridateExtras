@@ -13,6 +13,13 @@ hours_ago(hours = 0, tzone = "")
 find the previous date of. tzone defaults to the system time zone set on
 your computer.}
 }
+\value{
+The time, x hours ago
+}
 \description{
 the time x hours ago
+}
+\examples{
+hours_ago(1)
+hours_ago(24)
 }

@@ -20,3 +20,7 @@ The date, x years ago
 \description{
 The date x years ago
 }
+\examples{
+years_ago(1)
+years_ago(2000)
+}

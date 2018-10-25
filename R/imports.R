@@ -1,3 +1,3 @@
 #' @import lubridate
-#' @importFrom lubridate hms, parse_date_time
+#' @importFrom lubridate hms parse_date_time
 NULL

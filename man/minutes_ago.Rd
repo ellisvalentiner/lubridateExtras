@@ -13,6 +13,13 @@ minutes_ago(minutes = 0, tzone = "")
 find the previous date of. tzone defaults to the system time zone set on
 your computer.}
 }
+\value{
+The time, x minutes ago
+}
 \description{
 The time x minutes before now
+}
+\examples{
+minutes_ago(1)
+minutes_ago(60)
 }

@@ -19,3 +19,7 @@ The datetime, x seconds from now
 \description{
 The time x seconds before now
 }
+\examples{
+seconds_hence(60)
+seconds_hence(3600)
+}

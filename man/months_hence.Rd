@@ -19,3 +19,7 @@ the date, x months from now
 \description{
 The date x months hence
 }
+\examples{
+months_hence(1)
+months_hence(12)
+}

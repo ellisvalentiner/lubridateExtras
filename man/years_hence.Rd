@@ -20,3 +20,7 @@ The date, x years form now
 \description{
 The date x years hence
 }
+\examples{
+years_hence(1)
+years_hence(2000)
+}
