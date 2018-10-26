@@ -121,7 +121,8 @@ weeks_ago <- function(weeks = 0, tzone = "") {
 
 #' The date x months ago
 #'
-#' @param months an integer specifying th enumber of weeks to subtract from the current
+#' @param months an integer specifying th enumber of weeks to subtract from the
+#'   current
 #' @param tzone a character vector specifying which time zone you would like to
 #'   find the previous date of. tzone defaults to the system time zone set on
 #'   your computer.
@@ -377,5 +378,7 @@ is.weekday <- function(x) {
 #' @examples
 #' hms("2017-10-22 15:01:00")
 hms <- function(x) {
-  hms::as.hms(strftime(x, format = "%H:%M:%S"))
+  x <- parse_date_time(x = x, orders = c("ymdTz", "ymdT", "HMS"))
+  x <- strftime(x, format = "%H:%M:%S", tz = "GMT")
+  lubridate::hms(x)
 }

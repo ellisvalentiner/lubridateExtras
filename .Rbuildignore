@@ -8,3 +8,5 @@ README.Rmd
 ^vignettes/*
 ^CONDUCT\.md$
 ^CONTRIBUTING\.md$
+.lintr
+^\.lintr$

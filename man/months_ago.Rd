@@ -7,7 +7,8 @@
 months_ago(months = 0, tzone = "")
 }
 \arguments{
-\item{months}{an integer specifying th enumber of weeks to subtract from the current}
+\item{months}{an integer specifying th enumber of weeks to subtract from the
+current}
 
 \item{tzone}{a character vector specifying which time zone you would like to
 find the previous date of. tzone defaults to the system time zone set on
