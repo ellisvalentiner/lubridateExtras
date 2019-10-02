@@ -3,6 +3,8 @@
 export(ceiling_hms)
 export(days_ago)
 export(days_hence)
+export(first_monday)
+export(first_tuesday)
 export(floor_hms)
 export(hms)
 export(hours_ago)

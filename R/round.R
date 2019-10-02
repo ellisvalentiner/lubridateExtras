@@ -88,3 +88,55 @@ ceiling_hms <- function(x, unit = "seconds") {
   x <- ceiling_date(x, unit = unit)
   lubridateExtras::hms(x)
 }
+
+
+#' First and last methods for date-time objects
+#'
+#' @description
+#' Finds the first (or last) date that matches the criteria. Useful for finding
+#' the first/last weekday (e.g. first Monday of the month).
+#'
+#'
+#'
+#' @rdname first_period
+#' @param x a vector of date-time objects
+#' @param unit a character string specifying a time unit or a multiple of a unit
+#'   to be rounded to. Valid base units are month, bimonth, quarter, season,
+#'   halfyear and year.
+#' @keywords manip chron
+#' @seealso [base::round(), lubridate::round_date(), lubridate::floor_date(),
+#'   lubridate::ceiling_date()]
+
+#' First Monday
+#'
+#' @rdname first_period
+#' @export first_monday
+#' @examples
+#' first_monday("2017-10-22 15:01:00")
+#' first_monday("2019-01-01")
+first_monday <- function(x, unit = "month") {
+  y <- lubridate::floor_date(as_date(x), unit)
+  z <- lubridate::wday(y, week_start = 2)
+  if (x == 2) {
+    return(y)
+  } else {
+    y + days(7 - z)
+  }
+}
+
+#' First Tuesday
+#'
+#' @rdname first_period
+#' @export first_tuesday
+#' @examples
+#' first_tuesday("2017-10-22 15:01:00")
+#' first_tuesday("2019-01-01")
+first_tuesday <- function(x, unit = "month") {
+  y <- lubridate::floor_date(as_date(x), unit)
+  z <- lubridate::wday(y, week_start = 3)
+  if (x == 3) {
+    return(y)
+  } else {
+    y + days(7 - z)
+  }
+}
