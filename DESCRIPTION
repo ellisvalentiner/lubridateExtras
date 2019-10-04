@@ -19,6 +19,7 @@ Imports:
 Suggests:
   knitr (>= 1.17),
   lintr (>= 1.0.1.9000),
+  rlang (>= 0.4.0.9001),
   testthat (>= 2.2.1.9000)
 Remotes:
   tidyverse/hms,
