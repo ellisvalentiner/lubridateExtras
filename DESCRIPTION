@@ -1,7 +1,7 @@
 Package: lubridateExtras
 Type: Package
 Title: Convenience Functions for Manipulating Datetimes
-Version: 0.1.3
+Version: 0.1.4
 Authors@R: c(
     person("Ellis", "Valentiner", email = "ellis.valentiner@gmail.com", role = c("aut", "cre")),
     person("Geoffrey", "Hannigan", email = "hanni035@umn.edu", role = c("ctb")),
@@ -19,7 +19,7 @@ Imports:
 Suggests:
   knitr (>= 1.17),
   lintr (>= 1.0.1.9000),
-  testthat (>= 1.0.2)
+  testthat (>= 2.2.1.9000)
 Remotes:
   tidyverse/hms,
   yihui/knitr,
