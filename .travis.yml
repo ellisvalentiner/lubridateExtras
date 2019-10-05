@@ -6,6 +6,7 @@ cache: packages
 latex: false
 r_packages:
   - covr
+  - devtools
 
 env:
   global:
