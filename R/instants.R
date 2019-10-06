@@ -351,7 +351,7 @@ next_week <- function(tzone = "") {
 #' @examples
 #' is.weekend("2017-08-29")  # FALSE
 #' is.weekend("2017-09-02")  # TRUE
-is.weekend <- function(x) {
+is.weekend <- function(x) {  # nolint
   wday(x = as_date(x), label = FALSE, abbr = FALSE) %in% c(1, 7)
 }
 
