@@ -21,6 +21,9 @@ include:
 before_script:
 - mkdir -p ~/.R; echo 'PKG_CXXFLAGS := ${PKG_CXXFLAGS} -Wall -Wextra -pedantic -Werror' > ~/.R/Makevars
 
+before_install:
+- Rscript -e 'source("https://install-github.me/r-lib/remotes")'
+
 install:
 - R -e 'devtools::install_deps(dep = T)'
 
