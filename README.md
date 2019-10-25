@@ -40,12 +40,12 @@ tomorrow()
 
 days_ago(7)  # equivalent to lubridate::today() - lubridate::days(7)
 #> [1] "2018-02-14"
-(7 %>% days_ago) # usage with magrittr/tidyverse pipe
+(7 %>% days_ago) # usage with magrittr pipe
 #> [1] "2018-02-14"
 
 weeks_ago(2)  # equivalent to lubridate::today() - lubridate::days(2*7)
 #> [1] "2018-02-07"
-(2 %>% weeks_ago) # usage with magrittr/tidyverse pipe
+(2 %>% weeks_ago) # usage with magrittr pipe
 #> [1] "2018-02-07"
 
 
