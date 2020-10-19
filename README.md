@@ -8,7 +8,7 @@ Convenience functions for the lubridate package
 <!-- badges: start -->
 
 [![R build
-status](https://github.com/HaydenMacDonald/lubridateExtras/workflows/R-CMD-check/badge.svg)](https://github.com/HaydenMacDonald/lubridateExtras/actions)
+status](https://github.com/ellisvalentiner/lubridateExtras/workflows/R-CMD-check/badge.svg)](https://github.com/ellisvalentiner/lubridateExtras/actions)
 <!-- badges: end -->
 
 ## Overview
