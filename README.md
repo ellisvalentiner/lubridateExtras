@@ -5,7 +5,11 @@
 
 Convenience functions for the lubridate package
 
-<!-- Placeholder for build status, CRAN status, and coverage status -->
+<!-- badges: start -->
+
+[![R build
+status](https://github.com/HaydenMacDonald/lubridateExtras/workflows/R-CMD-check/badge.svg)](https://github.com/HaydenMacDonald/lubridateExtras/actions)
+<!-- badges: end -->
 
 ## Overview
 
@@ -33,28 +37,19 @@ on [github](https://github.com/ellisvalentiner/lubridateExtras/issues).
 library(lubridateExtras)
 
 yesterday()
-#> [1] "2018-02-20"
+#> [1] "2020-10-18"
 
 tomorrow()
-#> [1] "2018-02-22"
+#> [1] "2020-10-20"
 
 days_ago(7)  # equivalent to lubridate::today() - lubridate::days(7)
-#> [1] "2018-02-14"
-(7 %>% days_ago) # usage with magrittr pipe
-#> [1] "2018-02-14"
-
-weeks_ago(2)  # equivalent to lubridate::today() - lubridate::days(2*7)
-#> [1] "2018-02-07"
-(2 %>% weeks_ago) # usage with magrittr pipe
-#> [1] "2018-02-07"
-
-
+#> [1] "2020-10-12"
 
 days_hence(7)  # equivalent to lubridate::today() + lubridate::days(7)
-#> [1] "2018-02-28"
+#> [1] "2020-10-26"
 
 hms("2017-10-22 15:33:00")  # extracts the time-of-day component
-#> 15:33:00
+#> [1] "15H 33M 0S"
 ```
 
 ## Why lubridateExtras?

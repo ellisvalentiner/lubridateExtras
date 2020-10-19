@@ -23,7 +23,9 @@ Sys.setenv(TZ = "America/Detroit")
 
 Convenience functions for the lubridate package
 
-<!-- Placeholder for build status, CRAN status, and coverage status -->
+<!-- badges: start -->
+[![R build status](https://github.com/HaydenMacDonald/lubridateExtras/workflows/R-CMD-check/badge.svg)](https://github.com/HaydenMacDonald/lubridateExtras/actions)
+<!-- badges: end -->
 
 ## Overview
 

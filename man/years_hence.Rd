@@ -15,7 +15,7 @@ find the previous date of. tzone defaults to the system time zone set on
 your computer.}
 }
 \value{
-The date, x years form now
+The date, x years from now
 }
 \description{
 The date x years hence
