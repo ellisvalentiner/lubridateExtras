@@ -10,3 +10,4 @@ README.Rmd
 ^CONTRIBUTING\.md$
 .lintr
 ^\.lintr$
+^\.github$

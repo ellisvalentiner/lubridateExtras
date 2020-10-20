@@ -29,7 +29,8 @@ test_that("days_agreement", {
   expect_equal(days_ago(1), days_hence(-1))
   expect_equal(days_ago(-1), days_hence(1))
   expect_equal(days_ago(1), as_date(hours_ago(24)))
-  expect_equal(days_ago(365), years_ago(1))
+  expect_equal(days_ago(365), years_ago(1),
+               tolerance = if (leap_year(today())) days(1))
 })
 
 test_that("weeks", {
@@ -56,6 +57,15 @@ test_that("years", {
   expect_equal(day(years_hence(1)), day(today()))
   expect_equal(week(years_hence(1)), week(today()))
   expect_equal(month(years_hence(1)), month(today()))
+})
+
+test_that("decades", {
+  expect_equal(day(decades_ago(1)), day(today()))
+  expect_equal(week(decades_ago(1)), week(today()))
+  expect_equal(month(decades_ago(1)), month(today()))
+  expect_equal(day(decades_hence(1)), day(today()))
+  expect_equal(week(decades_hence(1)), week(today()))
+  expect_equal(month(decades_hence(1)), month(today()))
 })
 
 test_that("hours", {
@@ -112,14 +122,14 @@ test_that("next_week", {
   expect_equal(next_week(), this_week() + weeks(1))
 })
 
-test_that("is.weekday", {
-  expect_equal(is.weekday("2017-10-23"), TRUE)
-  expect_equal(is.weekday("2017-10-22"), FALSE)
+test_that("is_weekday", {
+  expect_equal(is_weekday("2017-10-23"), TRUE)
+  expect_equal(is_weekday("2017-10-22"), FALSE)
 })
 
-test_that("is.weekend", {
-  expect_equal(is.weekend("2017-10-23"), FALSE)
-  expect_equal(is.weekend("2017-10-22"), TRUE)
+test_that("is_weekend", {
+  expect_equal(is_weekend("2017-10-23"), FALSE)
+  expect_equal(is_weekend("2017-10-22"), TRUE)
 })
 
 test_that("hms", {
@@ -131,4 +141,23 @@ test_that("hms", {
     hms("2017-10-22 16:06:59"),
     lubridate::hms("16:06:59")
   )
+})
+
+test_that("floor_decade and ceiling_decade", {
+  expect_equal(day(floor_decade(now())), day("2020-01-01"))
+  expect_equal(month(floor_decade(now())), month("2020-01-01"))
+  expect_equal(year(floor_decade(now())), year("2020-01-01"))
+
+  expect_equal(day(floor_decade(today())), day("2020-01-01"))
+  expect_equal(month(floor_decade(today())), month("2020-01-01"))
+  expect_equal(year(floor_decade(today())), year("2020-01-01"))
+
+  expect_equal(day(ceiling_decade(now())), day("2029-12-31"))
+  expect_equal(month(ceiling_decade(now())), month("2029-12-31"))
+  expect_equal(year(ceiling_decade(now())), year("2029-12-31"))
+
+  expect_equal(day(ceiling_decade(today())), day("2029-12-31"))
+  expect_equal(month(ceiling_decade(today())), month("2029-12-31"))
+  expect_equal(year(ceiling_decade(today())), year("2029-12-31"))
+
 })
