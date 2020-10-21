@@ -155,6 +155,24 @@ years_ago <- function(years = 0, tzone = "") {
   as_date(today(tzone = tzone) - years(x = years))
 }
 
+#' The date x decades ago
+#'
+#' @param decades an integer specifying the number of decades to subtract
+#'   from the current date
+#' @param tzone a character vector specifying which time zone you would like to
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
+#'
+#' @return The date, x decades ago
+#' @export decades_ago
+#'
+#' @examples
+#' decades_ago(1)
+#' decades_ago(2000)
+decades_ago <- function(decades = 0, tzone = "") {
+  as_date(today(tzone = tzone) - years(x = decades * 10))
+}
+
 #' The time x seconds before now
 #'
 #' @param seconds integer number of seconds
@@ -276,7 +294,7 @@ months_hence <- function(months = 0, tzone = "") {
 #'   find the previous date of. tzone defaults to the system time zone set on
 #'   your computer.
 #'
-#' @return The date, x years form now
+#' @return The date, x years from now
 #' @export years_hence
 #'
 #' @examples
@@ -284,6 +302,24 @@ months_hence <- function(months = 0, tzone = "") {
 #' years_hence(2000)
 years_hence <- function(years = 0, tzone = "") {
   as_date(today(tzone = tzone) + years(x = years))
+}
+
+#' The date x decades hence
+#'
+#' @param decades an integer specifying the number of decades to add to the
+#'   current
+#' @param tzone a character vector specifying which time zone you would like to
+#'   find the previous date of. tzone defaults to the system time zone set on
+#'   your computer.
+#'
+#' @return The date, x decades from now
+#' @export decades_hence
+#'
+#' @examples
+#' decades_hence(1)
+#' decades_hence(2000)
+decades_hence <- function(decades = 0, tzone = "") {
+  as_date(today(tzone = tzone) + years(x = decades * 10))
 }
 
 #' The previous month
@@ -343,29 +379,29 @@ next_week <- function(tzone = "") {
 
 #' Is x a weekend?
 #'
-#' @export is.weekend
+#' @export is_weekend
 #' @param x a POSIXct, POSIXlt, Date, chron, yearmon, yearqtr, zoo, zooreg,
 #'   timeDate, xts, its, ti, jul, timeSeries, or fts object.
 #' @return boolean indicating whether x is a weekend
 #'
 #' @examples
-#' is.weekend("2017-08-29")  # FALSE
-#' is.weekend("2017-09-02")  # TRUE
-is.weekend <- function(x) {  # nolint
+#' is_weekend("2017-08-29")  # FALSE
+#' is_weekend("2017-09-02")  # TRUE
+is_weekend <- function(x) {
   wday(x = as_date(x), label = FALSE, abbr = FALSE) %in% c(1, 7)
 }
 
 #' Is x a weekday?
 #'
-#' @export is.weekday
+#' @export is_weekday
 #' @param x a POSIXct, POSIXlt, Date, chron, yearmon, yearqtr, zoo, zooreg,
 #'   timeDate, xts, its, ti, jul, timeSeries, or fts object.
 #' @return boolean indicating whether x is a weekday
 #'
 #' @examples
-#' is.weekend("2017-08-29")  # FALSE
-#' is.weekend("2017-09-02")  # TRUE
-is.weekday <- function(x) {
+#' is_weekday("2017-08-29")  # FALSE
+#' is_weekday("2017-09-02")  # TRUE
+is_weekday <- function(x) {
   wday(x = as_date(x), label = FALSE, abbr = FALSE) %in% 2:6
 }
 
@@ -381,4 +417,38 @@ hms <- function(x) {
   x <- parse_date_time(x = x, orders = c("ymdTz", "ymdT", "HMS"))
   x <- strftime(x, format = "%H:%M:%S", tz = "GMT")
   lubridate::hms(x)
+}
+
+#' The beginning (floor) of the decade
+#'
+#' @export floor_decade
+#' @param x a POSIXct, POSIXlt, Date, chron, yearmon, yearqtr, zoo, zooreg,
+#'   timeDate, xts, its, ti, jul, timeSeries, or fts object.
+#' @return the beginning of the decade as a Date object
+#'
+#' @examples
+#' floor_decade("2017-10-22 15:01:00")
+floor_decade <- function(x) {
+  x <- parse_date_time(x = x, orders = c("ymd", "ymdTz", "ymdT"))
+  x <- floor_date(x, unit = "year")
+  beginning <- year(x) - year(x) %% 10
+  year(x) <- beginning
+  return(x)
+}
+
+#' The end (ceiling) of a decade
+#'
+#' @export ceiling_decade
+#' @param x a POSIXct, POSIXlt, Date, chron, yearmon, yearqtr, zoo, zooreg,
+#'   timeDate, xts, its, ti, jul, timeSeries, or fts object.
+#' @return the end of the decade as a Date object
+#'
+#' @examples
+#' ceiling_decade("2017-10-22 15:01:00")
+ceiling_decade <- function(x) {
+  x <- parse_date_time(x = x, orders = c("ymd", "ymdTz", "ymdT"))
+  decade_end <- year(x) - (year(x) %% 10) + 10
+  year(x) <- decade_end
+  x <- floor_date(x, unit = "year") - days(1)
+  return(x)
 }

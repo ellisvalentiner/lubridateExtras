@@ -1,3 +1,1 @@
-linters: with_defaults(snake_case_linter = NULL)
 exclude: "library*"
-exclusions: list("R/instants.R")
