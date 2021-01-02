@@ -28,7 +28,7 @@
 #' @examples
 #'
 #' ## print fractional seconds
-#' options(digits.secs=6)
+#' options(digits.secs = 6)
 #'
 #' x <- lubridate::hms("12:01:59.23")
 #' round_hms(x, ".5s")
@@ -51,10 +51,11 @@
 #' ceiling_hms(x, "minute")
 #' ceiling_hms(x, "5 mins")
 #' ceiling_hms(x, "hour")
-#'
 #' @export
 round_hms <- function(x, unit = "second") {
-  if (!length(x)) return(x)
+  if (!length(x)) {
+    return(x)
+  }
   x <- lubridate::hms(x)
   x <- as.POSIXlt(x, origin = "1970-01-01T00:00:00", tz = "GMT")
   x <- round_date(x, unit = unit)
@@ -67,7 +68,9 @@ round_hms <- function(x, unit = "second") {
 #' @rdname round_hms
 #' @export
 floor_hms <- function(x, unit = "seconds") {
-  if (!length(x)) return(x)
+  if (!length(x)) {
+    return(x)
+  }
   x <- lubridate::hms(x)
   x <- as.POSIXlt(x, origin = "1970-01-01T00:00:00", tz = "GMT")
   x <- floor_date(x, unit = unit)
@@ -82,7 +85,9 @@ floor_hms <- function(x, unit = "seconds") {
 #' x <- hms("12:01:59.23")
 #' ceiling_hms(x, "10 seconds")
 ceiling_hms <- function(x, unit = "seconds") {
-  if (!length(x)) return(x)
+  if (!length(x)) {
+    return(x)
+  }
   x <- lubridate::hms(x)
   x <- as.POSIXlt(x, origin = "1970-01-01T00:00:00", tz = "GMT")
   x <- ceiling_date(x, unit = unit)
