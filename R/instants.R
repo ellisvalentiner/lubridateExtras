@@ -385,8 +385,8 @@ next_week <- function(tzone = "") {
 #' @return boolean indicating whether x is a weekend
 #'
 #' @examples
-#' is_weekend("2017-08-29")  # FALSE
-#' is_weekend("2017-09-02")  # TRUE
+#' is_weekend("2017-08-29") # FALSE
+#' is_weekend("2017-09-02") # TRUE
 is_weekend <- function(x) {
   wday(x = as_date(x), label = FALSE, abbr = FALSE) %in% c(1, 7)
 }
@@ -399,8 +399,8 @@ is_weekend <- function(x) {
 #' @return boolean indicating whether x is a weekday
 #'
 #' @examples
-#' is_weekday("2017-08-29")  # FALSE
-#' is_weekday("2017-09-02")  # TRUE
+#' is_weekday("2017-08-29") # FALSE
+#' is_weekday("2017-09-02") # TRUE
 is_weekday <- function(x) {
   wday(x = as_date(x), label = FALSE, abbr = FALSE) %in% 2:6
 }
