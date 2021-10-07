@@ -30,7 +30,8 @@ test_that("days_agreement", {
   expect_equal(days_ago(-1), days_hence(1))
   expect_equal(days_ago(1), as_date(hours_ago(24)))
   expect_equal(days_ago(365), years_ago(1),
-               tolerance = if (leap_year(today())) days(1))
+    tolerance = if (leap_year(today()) || leap_year(years_ago(1))) days(1)
+  )
 })
 
 test_that("weeks", {
@@ -159,5 +160,4 @@ test_that("floor_decade and ceiling_decade", {
   expect_equal(day(ceiling_decade(today())), day("2029-12-31"))
   expect_equal(month(ceiling_decade(today())), month("2029-12-31"))
   expect_equal(year(ceiling_decade(today())), year("2029-12-31"))
-
 })
