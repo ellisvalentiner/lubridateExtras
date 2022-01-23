@@ -45,7 +45,7 @@ boundary of the specified time unit.
 \examples{
 
 ## print fractional seconds
-options(digits.secs=6)
+options(digits.secs = 6)
 
 x <- lubridate::hms("12:01:59.23")
 round_hms(x, ".5s")
@@ -68,8 +68,7 @@ ceiling_hms(x, "second")
 ceiling_hms(x, "minute")
 ceiling_hms(x, "5 mins")
 ceiling_hms(x, "hour")
-
-x <- hms("12:01:59.23")
+x <- lubridate::hms("12:01:59.23")
 ceiling_hms(x, "10 seconds")
 }
 \seealso{

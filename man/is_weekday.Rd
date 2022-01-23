@@ -17,6 +17,6 @@ boolean indicating whether x is a weekday
 Is x a weekday?
 }
 \examples{
-is_weekday("2017-08-29")  # FALSE
-is_weekday("2017-09-02")  # TRUE
+is_weekday("2017-08-29") # FALSE
+is_weekday("2017-09-02") # TRUE
 }

@@ -29,7 +29,8 @@ Convenience functions for the lubridate package
 
 ## Overview
 
-Lubridate makes it easier to work with date-time data in R and provides new capabilities. LubridateExtras builds on top of lubridate to provide a number of convenience functions, primarily focused on abstracting patterns in ways that improve code readability and reduce copying and pasting code.
+Lubridate makes it easier to work with date-time data in R and provides new capabilities.
+LubridateExtras builds on top of lubridate to provide a number of convenience functions, primarily focused on abstracting patterns in ways that improve code readability and reduce copying and pasting code.
 
 ## Installation
 
@@ -57,9 +58,3 @@ days_hence(7)  # equivalent to lubridate::today() + lubridate::days(7)
 
 hms("2017-10-22 15:33:00")  # extracts the time-of-day component
 ```
-
-## Why lubridateExtras?
-
-Some people are probably asking the question: why lubridateExtras?
-
-lubridateExtras does not do anything that you cannot do with lubridate but similarly you don't need lubridate at all to work with date/times in R! If you like the syntactic sugar of lubridateExtras then use it, otherwise stick with what works for you.
