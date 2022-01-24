@@ -59,3 +59,4 @@ days_hence(7)  # equivalent to lubridate::today() + lubridate::days(7)
 
 hms("2017-10-22 15:33:00")  # extracts the time-of-day component
 ```
+
