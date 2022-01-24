@@ -11,7 +11,7 @@ vignette: >
 ```{r, echo=FALSE}
 suppressPackageStartupMessages(library(dplyr))
 suppressPackageStartupMessages(library(lubridate))
-library(lubridateExtras)
+suppressPackageStartupMessages(library(lubridateExtras))
 ```
 
 ## Example
@@ -26,8 +26,10 @@ transactions %>%
 ```
 
 Even in this straightforward example it can be difficult to remember: does the `>=` operator evaluate before or after the `-` operator?
+We can add parantheses to make the expression more explicit but that also adds more syntax.
 
-lubridateExtra aims to remove this sort of ambiguity and make the intent clearer through convenience functions. With lubridateExtras, we could rewrite this as follows:
+lubridateExtra aims to remove this sort of ambiguity and make the intent clearer through convenience functions.
+With lubridateExtras, we could rewrite this as follows:
 
 ```{r, eval=FALSE}
 transactions %>%

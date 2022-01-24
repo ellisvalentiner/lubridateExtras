@@ -21,7 +21,41 @@ navbar:
     href: https://github.com/ellisvalentiner/lubridateExtras
 
 reference:
-  - title: similar functions
+  - title: Extract HMS
+    contents:
+    - hms
+  - title: Rounding Functions
+    contents:
+    - ceiling_decade
+    - ceiling_hms
+    - floor_decade
+    - floor_hms
+    - round_hms
+  - title: Relative functions
     contents:
     - yesterday
     - tomorrow
+    - days_ago
+    - days_hence
+    - decades_ago
+    - decades_hence
+    - hours_ago
+    - hours_hence
+    - is_weekday
+    - is_weekend
+    - last_month
+    - last_week
+    - minutes_ago
+    - minutes_hence
+    - months_ago
+    - months_hence
+    - next_month
+    - next_week
+    - seconds_ago
+    - seconds_hence
+    - this_month
+    - this_week
+    - weeks_ago
+    - weeks_hence
+    - years_ago
+    - years_hence

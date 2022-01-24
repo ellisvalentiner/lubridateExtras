@@ -9,6 +9,7 @@ Convenience functions for the lubridate package
 
 [![R build
 status](https://github.com/ellisvalentiner/lubridateExtras/workflows/R-CMD-check/badge.svg)](https://github.com/ellisvalentiner/lubridateExtras/actions)
+[![Coverage](%5B!%5Bcodecov%5D(https://codecov.io/gh/ellisvalentiner/lubridateExtras/branch/main/graph/badge.svg?token=G4DGE1C5dG)%5D(https://codecov.io/gh/ellisvalentiner/lubridateExtras))](https://app.codecov.io/gh/ellisvalentiner/lubridateExtras/)
 <!-- badges: end -->
 
 ## Overview
@@ -37,26 +38,17 @@ on [github](https://github.com/ellisvalentiner/lubridateExtras/issues).
 library(lubridateExtras)
 
 yesterday()
-#> [1] "2020-10-18"
+#> [1] "2022-01-23"
 
 tomorrow()
-#> [1] "2020-10-20"
+#> [1] "2022-01-25"
 
 days_ago(7)  # equivalent to lubridate::today() - lubridate::days(7)
-#> [1] "2020-10-12"
+#> [1] "2022-01-17"
 
 days_hence(7)  # equivalent to lubridate::today() + lubridate::days(7)
-#> [1] "2020-10-26"
+#> [1] "2022-01-31"
 
 hms("2017-10-22 15:33:00")  # extracts the time-of-day component
 #> [1] "15H 33M 0S"
 ```
-
-## Why lubridateExtras?
-
-Some people are probably asking the question: why lubridateExtras?
-
-lubridateExtras does not do anything that you cannot do with lubridate
-but similarly you don’t need lubridate at all to work with date/times in
-R\! If you like the syntactic sugar of lubridateExtras then use it,
-otherwise stick with what works for you.

@@ -11,3 +11,4 @@ README.Rmd
 .lintr
 ^\.lintr$
 ^\.github$
+^pkgdown$

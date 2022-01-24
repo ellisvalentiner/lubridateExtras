@@ -86,22 +86,17 @@
 
     
     
-<pre><code><span class="co">## </span>
-<span class="co">## Attaching package: 'lubridateExtras'</span></code></pre>
-<pre><code><span class="co">## The following object is masked from 'package:lubridate':</span>
-<span class="co">## </span>
-<span class="co">##     hms</span></code></pre>
 <div class="section level2">
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
 <p>Suppose you want to review transactions from the past 7 days.</p>
 <p>Without lubridateExtras, this might look like this:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">transactions</span> <span class="op">%&gt;%</span>
   <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">date</span> <span class="op">&gt;=</span> <span class="fu">today</span><span class="op">(</span><span class="op">)</span> <span class="op">-</span> <span class="fu">days</span><span class="op">(</span><span class="fl">7</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<p>Even in this straightforward example it can be difficult to remember: does the <code>&gt;=</code> operator evaluate before or after the <code>-</code> operator?</p>
+<p>Even in this straightforward example it can be difficult to remember: does the <code>&gt;=</code> operator evaluate before or after the <code>-</code> operator? We can add parantheses to make the expression more explicit but that also adds more syntax.</p>
 <p>lubridateExtra aims to remove this sort of ambiguity and make the intent clearer through convenience functions. With lubridateExtras, we could rewrite this as follows:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">transactions</span> <span class="op">%&gt;%</span>
   <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">date</span> <span class="op">&gt;=</span> <span class="fu"><a href="../reference/days_ago.html">days_ago</a></span><span class="op">(</span><span class="fl">7</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p>This accomplishes the exact same thing.</p>
