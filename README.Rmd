@@ -25,6 +25,7 @@ Convenience functions for the lubridate package
 
 <!-- badges: start -->
 [![R build status](https://github.com/ellisvalentiner/lubridateExtras/workflows/R-CMD-check/badge.svg)](https://github.com/ellisvalentiner/lubridateExtras/actions)
+[![Coverage]([![codecov](https://codecov.io/gh/ellisvalentiner/lubridateExtras/branch/main/graph/badge.svg?token=G4DGE1C5dG)](https://codecov.io/gh/ellisvalentiner/lubridateExtras))](https://app.codecov.io/gh/ellisvalentiner/lubridateExtras/)
 <!-- badges: end -->
 
 ## Overview
