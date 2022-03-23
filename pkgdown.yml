@@ -3,7 +3,7 @@ pkgdown: 2.0.2
 pkgdown_sha: ~
 articles:
   intro: intro.html
-last_built: 2022-03-23T15:38Z
+last_built: 2022-03-23T15:54Z
 urls:
   reference: https://ellisvalentiner.github.com/lubridateExtras/reference
   article: https://ellisvalentiner.github.com/lubridateExtras/articles
