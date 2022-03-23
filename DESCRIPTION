@@ -1,7 +1,7 @@
 Package: lubridateExtras
 Type: Package
 Title: Convenience Functions for Manipulating Datetimes
-Version: 0.1.4
+Version: 0.1.5
 Authors@R: c(
     person("Ellis", "Valentiner", email = "ellis.valentiner@gmail.com", role = c("aut", "cre")),
     person("Geoffrey", "Hannigan", email = "hanni035@umn.edu", role = c("ctb")),
@@ -12,10 +12,10 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends:
-  R (>= 4.0.0)
+  R (>= 4.1.0)
 Imports:
   lubridate (>= 1.8.0),
-  hms (>= 0.5.3)
+  hms (>= 1.1.1)
 Suggests:
   knitr (>= 1.30),
   lintr (>= 2.0.1),
